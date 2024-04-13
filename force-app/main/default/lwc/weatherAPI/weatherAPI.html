@@ -1,0 +1,45 @@
+<template>
+    <lightning-card title="Weather Report">
+        <div if:true={passwordError}
+            style="text-align: start;color: rgb(194, 57, 52);background-color: rgb(255, 255, 255);font-size: 12px;">
+            Please
+            check your username and password. If you still can&apos;t log in, contact your Salesforce
+            administrator.
+        </div>
+        <div if:true={loginSuccess} class="slds-var-m-around_medium">
+            <lightning-input onchange={handleOnchange} label="Search City" onkeypress={handleEnter}>
+            </lightning-input>
+            <br>
+            <div class="slds-text-body_regular">
+                <b>{citi}</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <b>Time : {time}</b><br><br>
+                <b>Date : {date}</b>
+            </div>
+            <div if:true={hasweekend} class="slds-text-body_regular" style="color:red">
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b>{day}</b>
+            </div>
+            <div if:false={hasweekend} class="slds-text-body_regular" style="color:black">
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b>{day}</b>
+            </div>
+            <img src={imageURL} />
+            <b>{weather}</b>&emsp;
+            <b>{temp}</b>
+            <br>
+            <lightning-button label="Get Weather" onclick={buttonClick}></lightning-button>
+        </div>
+        <div if:false={loginSuccess} class="slds-var-m-around_medium">
+            <lightning-input onchange={handleUsername} label="Username" onkeypress={handleEnter2}>
+            </lightning-input>
+            <br>
+            <lightning-input onchange={handlePassword} label="Password" onkeypress={handleEnter2}>
+            </lightning-input>
+            <br>
+            <p><lightning-button variant="brand" label="Log In to Weather" onclick={login}></lightning-button>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <a href="https://shoppingwb-dev-ed.my.salesforce.com/secur/forgotpassword.jsp?locale=in"
+                    style="text-align: start;color: rgb(0, 95, 178);background-color: rgb(255, 255, 255);font-size: 0.75rem;">Forgot
+                    Your Password?</a>
+            </p>
+        </div>
+    </lightning-card>
+</template>

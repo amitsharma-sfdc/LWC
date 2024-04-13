@@ -1,0 +1,10 @@
+<!-- sldsValidatorIgnore -->
+
+<template>
+    <div style="height: 300px;">
+        <lightning-datatable key-field="Id" data={outcome.data} columns={columns} onsave={handleSave}
+            draft-values={saveDraftValues} hide-checkbox-column='true' show-row-number-column='true'
+            onrowaction={handleonRowAction}>
+        </lightning-datatable>
+    </div>
+</template>

@@ -1,0 +1,43 @@
+<template>
+    <div>
+        <lightning-card title="Title" icon-name="utility:light_bulb" variant="warning">
+            <h1>Welcome To LWC</h1>
+            <h2>Welcome To Salesforce</h2>
+            <h3>{checklist}</h3>
+        </lightning-card>
+    </div>
+    <c-child-Component></c-child-Component>
+    <div>
+        <p>Employee Name :{employee.Name}</p>
+        <p>Employee Id :{employee.EmpID}</p>
+        <p>Designation :{employee.Designation}</p>
+        <p>Company Name :{employee.Company}</p>
+        <p>City :<b>{employee.City}</b></p>
+        <p>Band :{getBand}</p>
+    </div>
+
+    <table class="slds-table slds-table_bordered">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Employee Id</td>
+                <td>Designation</td>
+                <td>Company</td>
+                <td>City</td>
+                <td>Band</td>
+            </tr>
+        </thead>
+        <tbody>
+            <template for:each={employeeList} for:item="employe">
+                <tr key={employe.Name}>
+                    <td>{employe.Name}</td>
+                    <td>{employe.EmpID}</td>
+                    <td>{employe.Designation}</td>
+                    <td>{employe.Company}</td>
+                    <td>{employe.City}</td>
+                    <td>{getBand}</td>
+                </tr>
+            </template>
+        </tbody>
+    </table>
+</template>

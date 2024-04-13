@@ -1,0 +1,48 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <div>
+        <div>
+            <lightning-input onchange={changeHandler} value={value}></lightning-input>
+        </div>
+        <div>
+            <lightning-button variant="brand-outline" label="7" onclick={handleClick7}
+                class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand-outline" label="8" onclick={handleClick8}
+                class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand-outline" label="9" onclick={handleClick9}
+                class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand-outline" label="X" onclick={handleClickX}
+                class="slds-m-left_x-small"></lightning-button>
+        </div>
+        <div>
+            <lightning-button variant="brand-outline" label="4" onclick={handleClick4}
+                class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand-outline" label="5" onclick={handleClick5}
+                class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand-outline" label="6" onclick={handleClick6}
+                class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand-outline" label="/" onclick={handleClick} class="slds-m-left_x-small"
+                style="width:250px"></lightning-button>
+        </div>
+        <div>
+            <lightning-button variant="brand-outline" label="1" onclick={handleClick1}
+                class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand-outline" label="2" onclick={handleClick2}
+                class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand-outline" label="3" onclick={handleClick3}
+                class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand-outline" label="+" onclick={handleClick} class="slds-m-left_x-small"
+                style="width:250px"></lightning-button>
+        </div>
+        <div>
+            <lightning-button variant="brand-outline" label="." onclick={handleClickDot}
+                class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand-outline" label="0" onclick={handleClick0}
+                class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand-outline" label="DEL" onclick={handleClickDel}
+                class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand-outline" label="-" onclick={handleClick} class="slds-m-left_x-small"
+                style="width:250px"></lightning-button>
+        </div>
+    </div>
+</template>
