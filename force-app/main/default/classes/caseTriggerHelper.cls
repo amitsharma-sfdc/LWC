@@ -3,5 +3,5 @@ public class caseTriggerHelper {
     Map<Id, sObject> oldrec,
     Map<Id, sObject> newrec
   ) {
-  } //
+  }
 }
